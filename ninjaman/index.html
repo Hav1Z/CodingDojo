@@ -37,7 +37,7 @@
                 background-image: url('ninja.gif');
                 background-size: contain;
                 position: absolute;
-                left: 40px; 
+                left: 40px;
                 top: 40px;
             }
 
@@ -126,5 +126,48 @@
             output;
     }
     drawWorld()
+
+    var ninjaman = {
+        x: 1,
+        y: 1
+    }
+    function drawNinjaMan(){
+        document.getElementById("ninjaman").style.top = 
+            ninjaman.y * 40 + "px"
+            document.getElementById("ninjaman").style.top = 
+            ninjaman.x * 40 + "px"
+    }
+    drawNinjaMan()
+
+    document.onkeydown = function(e){
+        if(e.keycode == 37){
+            if(world[ninjaman.y] [ninjaman.x - 1] != 1){
+                ninjaman.x--;
+            }
+        }
+        if(e.keycode == 39){
+            if(world[ninjaman.y] [ninjaman.x + 1] != 1){
+            ninjaman.x++;
+        }
+    }
+        if(e.keycode == 38){
+            if(world[ninjaman.y +1 ] [ninjaman.x + 1] != 1){
+            ninjaman.y++;
+        }
+    }
+    // add going down functionality
+    world[ninjaman.y] [ninjaman.x] = 0;
+    drawNinjaman()
+    drawWorld()
+}
+
+    // keep score of how many sushi´s ninjaman eats
+    // sushi = 10pts onigiri = 5pts
+
+    // advance challenges - random world
+
+
+    // hacker challenges - create ghosts that chase ninjaman
+
 </script>
 </html>
