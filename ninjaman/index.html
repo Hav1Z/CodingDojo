@@ -47,57 +47,84 @@
     
     
     <body>
-        <div id='world'>
-            <div class='row'>
-                <div class = 'wall'></div> 
-                <div class = 'wall'></div>
-                <div class = 'wall'></div>
-                <div class = 'wall'></div>
-                <div class = 'wall'></div>
-            </div>
-            <div class='row'>
-                <div class = 'wall'></div> 
-                <div class = 'blank'></div>
-                <div class = 'sushi'></div>
-                <div class = 'sushi'></div>
-                <div class = 'wall'></div>
-            </div>
-            <div class='row'>
-                <div class = 'wall'></div>
-                <div class = 'sushi'></div>
-                <div class = 'wall'></div>
-                <div class = 'sushi'></div>
-                <div class = 'wall'></div>
-            </div>
-        </div>
+        <div id='world'></div>
         <div class='row'>
-        <div class = 'wall'></div> 
-        <div class = 'sushi'></div>
-        <div class = 'sushi'></div>
-        <div class = 'sushi'></div>
-        <div class = 'wall'></div>
-    </div>
-        <div>
-            <div class='row'>
             <div class = 'wall'></div> 
             <div class = 'wall'></div>
             <div class = 'wall'></div>
             <div class = 'wall'></div>
             <div class = 'wall'></div>
         </div>
-
+        <div class='row'>
+            <div class = 'wall'></div> 
+            <div class = 'blank'></div>
+            <div class = 'sushi'></div>
+            <div class = 'sushi'></div>
+            <div class = 'wall'></div>
+        </div>
+        <div class='row'>
+            <div class = 'wall'></div>
+            <div class = 'sushi'></div>
+            <div class = 'wall'></div>
+            <div class = 'sushi'></div>
+            <div class = 'wall'></div>
+        </div>
+    </div>
+    <div class='row'>
+    <div class = 'wall'></div> 
+    <div class = 'sushi'></div>
+    <div class = 'sushi'></div>
+    <div class = 'sushi'></div>
+    <div class = 'wall'></div>
+</div>
+    <div>
+        <div class='row'>
+        <div class = 'wall'></div> 
+        <div class = 'wall'></div>
+        <div class = 'wall'></div>
+        <div class = 'wall'></div>
+        <div class = 'wall'></div>
+    </div>
         <div id='ninjaman'></div>
     
     
     </body>
     <script type="text/javascript">
-        var world = world [
+        var world = [
 
         [1,1,1,1,1],
         [1,0,2,2,1],
-        [1,1,1,1,1],
-        [1,1,1,1,1],
+        [1,2,1,2,1],
+        [1,2,2,2,1],
+        [1,0,2,2,1],
+        [1,2,1,2,1],
+        [1,2,2,2,1],
+        [1,0,2,2,1],
+        [1,2,1,2,1],
+        [1,2,2,2,1],
         [1,1,1,1,1],
     ];
-    </script>
+    var worldDict = {
+        0: "blank"
+        1: "wall"
+        2: "sushi"
+    }
+
+    function drawWorld(){
+        output = "";
+
+        for(var row = 0; row < world.length; row++){
+            output += "<div class = "row"></div>"
+            for(var x =0; x <div world[row].lengtrh; x++){
+                output += "<div class = " + worldDict[
+                    world] [row] [x]]"></div>"
+            }
+            output += "</div>"
+        }
+        
+        document.getElementById("world").innerHTML = 
+            output;
+    }
+    drawWorld()
+</script>
 </html>
